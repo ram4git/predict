@@ -18,10 +18,15 @@ export function resetPassword (email) {
 }
 
 export function saveUser (user) {
+  console.log(JSON.stringify(user, null, 2));
   return ref.child(`users/${user.uid}/info`)
     .set({
       email: user.email,
-      uid: user.uid
+      uid: user.uid,
+      name: user.email,
+      rank: 'n/a',
+      money: 12,
+      matches: []
     })
     .then(() => user)
 }

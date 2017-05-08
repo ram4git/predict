@@ -1,0 +1,117 @@
+.match {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/*.match div {
+  border: 1px solid #ffb3ff;
+}*/
+
+.selector {
+  display: grid;
+  grid-template-columns: [col] 50% [col] 50%;
+  grid-template-rows: [row] auto [row] auto [row];
+}
+
+.match .odds-left {
+  grid-row: 1 ;
+  grid-column: col / span 1;
+  min-height: 60px;
+}
+
+.match .odds-right {
+  grid-row: 1 ;
+  grid-column: col 2 / span 1;
+  min-height: 60px;
+}
+
+.odds-left div.fill {
+  background-color: #339966;
+  height: 40px;
+  float: right;
+  font-size: 32px;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.odds-right div.fill {
+  background-color: #cc66ff;
+  height: 40px;
+  float: left;
+  font-size: 32px;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.odds-left:hover::after{
+    content: 'odds';
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+}
+.odds-right:hover::after{
+    content: 'odds';
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+.match .left {
+  min-height: 400px;
+  grid-column: col / span 1;
+  grid-row: 2;
+  background-repeat: round;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 4px;
+}
+
+.match .right {
+  grid-column: col 2 / span 1;
+  grid-row: 2;
+  min-height: 400px;
+  background-repeat: round;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 4px;
+
+}
+
+.right h1 {
+  font-size: 72px;
+  font-weight: bolder;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.left h1 {
+  font-size: 72px;
+  font-weight: bolder;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.match .bets-left {
+  grid-row: 3 ;
+  grid-column: col / span 1;
+  min-height: 200px;
+  margin-top: 20px;
+}
+.match .bets-right {
+  grid-row: 3 ;
+  grid-column: col 2 / span 1;
+  min-height: 200px;
+  margin-top: 20px;
+}
+
+.better-name {
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #ebfafa;
+  margin-left: 11px;
+  text-transform: uppercase;
+}
+
+.banner {
+  background-color: #ffffcc;
+  border: 7px solid #ffffcc;
+  color: #1a1aff;
+}

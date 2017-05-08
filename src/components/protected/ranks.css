@@ -1,0 +1,74 @@
+.ranksTable h1 {
+    text-align: center;
+}
+.ranksTable h5 {
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 20px;
+}
+
+.ranks {
+  min-width: 600px;
+  width: 60%;
+  margin: auto;
+}
+
+.rank {
+  border-width:2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #f0f5f5;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  min-height: 60px;
+}
+
+.rank .index {
+  flex-grow: 0;
+  display:inline-block;
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  margin-left: 18px;
+  text-align: center;
+  color: #4747d1;
+  background: #ffe0b3;
+  border-radius: 50%;
+  border: 3px solid #ffb366;
+
+}
+
+.ranks .rank:first-child {
+  margin-bottom: 20px;
+  background-color: #b3e0ff;
+  border: 7px solid #b3e0ff;
+  color: #000099;
+  font-weight: bolder;
+}
+
+.rank .name {
+  display:inline-block;
+  flex-grow: 600;
+  font-size: 36px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.rank .money {
+  flex-grow: 0;
+  display:inline-block;
+  font-size: 36px;
+  min-width: 120px;
+  margin-right: 18px;
+  text-align: right;
+}
+
+.rank .money.positive{
+  background: #b3e6cc;
+  border: 1px solid #006600;
+}
+
+.rank .money.negative{
+  background: #ff8080;
+  border: 1px solid #cc0000;
+}
