@@ -115,3 +115,24 @@
   border: 7px solid #ffffcc;
   color: #1a1aff;
 }
+
+.matchNail {
+  min-width: 100px;
+  min-height: 100px;
+  text-align: center;
+  opacity: 0.2;
+}
+
+.matchNail h1 {
+  margin-bottom: 12px;
+}
+
+.raised {
+  color: red;
+    box-shadow: 0 0 0 1px #D4D4D5, 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
+  }
+
+.raised .matchNail {
+  background-color: #adc2eb;
+  opacity: 1;
+}
