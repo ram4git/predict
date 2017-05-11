@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import './ranks.css';
+import { Label, Icon } from 'semantic-ui-react'
+
 
 
 
@@ -30,7 +32,12 @@ export default class Dashboard extends Component {
     this.state.ranks.forEach( (ranker, idx) => {
       const money = ranker.money.toFixed(2);
       ranks.push(<div className="rank" key={ idx }>
-        <div className="index">{ idx+1 }</div>
+        {
+          idx === 0 ?
+          <Label as='a' color='yellow' ribbon><Icon loading name='star' size='huge'/></Label> :
+          <div className="index">{ idx+1 }</div>
+        }
+
         <div className="name">{ ranker.name }</div>
         <div className={ money >= 0 ? 'money positive' : 'money negative'}>{ money }</div>
       </div>);

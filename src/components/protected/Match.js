@@ -9,7 +9,7 @@ export default class Match extends Component {
     this.state = {
       a: 'IND',
       a_bets: 4,
-      b: 'ENG',
+      b: 'PAK',
       b_bets: 6,
       banner: 'Amazing Century by VKohli',
       time: 1494264207,

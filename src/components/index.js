@@ -98,7 +98,6 @@ export default class App extends Component {
                 <PrivateRoute authed={this.state.authed} path='/ranks' component={Dashboard} />
                 <PrivateRoute authed={this.state.authed} path='/match' component={Match} />
                 <PrivateRoute authed={this.state.authed} path='/predict' component={Predict} />
-                <PrivateRoute authed={this.state.authed} path='/profile' component={Profile} />
                 <Route render={() => <h3>No Match</h3>} />
               </Switch>
             </div>

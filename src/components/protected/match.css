@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: [col] 50% [col] 50%;
   grid-template-rows: [row] auto [row] auto [row];
+  line-height: 2.6em;
 }
 
 .match .odds-left {
