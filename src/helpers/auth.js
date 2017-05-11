@@ -5,7 +5,8 @@ export function auth (email, pw) {
     .then(saveUser)
 }
 
-export function logout () {
+export function logout (e) {
+  e.preventDefault();
   return firebaseAuth().signOut()
 }
 

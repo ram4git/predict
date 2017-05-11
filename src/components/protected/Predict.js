@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card } from 'semantic-ui-react'
 import keydown, { Keys } from 'react-keydown';
+import Match from './Match'
 
 import './match.css';
 
@@ -14,7 +15,7 @@ export default class Predict extends Component {
   }
 
   renderSelectedMatch() {
-    return <h1>SELECTED {this.state.selected }</h1>
+    return <Match />
   }
 
 //  @keydown( 'left' )
@@ -58,14 +59,14 @@ export default class Predict extends Component {
   }
 
   render () {
-    return ( <div>
+    return (<div>
+     <div className="matchCards">
         <Card.Group itemsPerRow={8}>
           { this.renderMatches() }
         </Card.Group>
-        <hr/>
-        { this.renderSelectedMatch() }
       </div>
-
+      { this.renderSelectedMatch() }
+    </div>
     );
   }
 

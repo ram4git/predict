@@ -1,6 +1,6 @@
 .match {
-  width: 80%;
   margin: auto;
+  margin-top: 32px;
   text-align: center;
 }
 
@@ -12,19 +12,20 @@
   display: grid;
   grid-template-columns: [col] 50% [col] 50%;
   grid-template-rows: [row] auto [row] auto [row];
-  line-height: 2.6em;
 }
 
 .match .odds-left {
   grid-row: 1 ;
   grid-column: col / span 1;
   min-height: 60px;
+  line-height: 2.8em;
 }
 
 .match .odds-right {
   grid-row: 1 ;
   grid-column: col 2 / span 1;
   min-height: 60px;
+  line-height: 2.8em;
 }
 
 .odds-left div.fill {

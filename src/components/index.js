@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import { Route, BrowserRouter, Link, Redirect, Switch } from 'react-router-dom'
 import Login from './Login'
 import Register from './Register'
@@ -76,12 +75,11 @@ export default class App extends Component {
                 </li>
                 <li>
                   {this.state.authed
-                    ? <button
-                        style={{border: 'none', background: 'transparent'}}
-                        onClick={() => {
-                          logout()
+                    ? <a
+                        onClick={(e) => {
+                          logout(e)
                         }}
-                        className="navbar-brand">Logout</button>
+                        className="navbar-brand">Logout</a>
                     : <span>
                         <Link to="/login" className="navbar-brand">Login</Link>
                       </span>}
@@ -89,7 +87,7 @@ export default class App extends Component {
               </ul>
             </div>
           </nav>
-          <div className="container">
+          <div className="container content">
             <div className="row">
               <Switch>
                 <Route path='/' exact component={Home} />
