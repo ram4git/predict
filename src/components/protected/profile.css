@@ -1,0 +1,91 @@
+.user-profile .ui.card {
+	width : 150px;
+	box-shadow: none;
+}
+
+.user-profile .ui.card > .image {
+	border-radius: 50% !important;
+}
+
+.user-profile .ui.card >.content {
+	border-top: 0px;
+	width: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.user-profile {
+	display: flex;
+	justify-content: flex-start;
+	align-items: space-around;
+}
+
+.user-profile .user-avatar {
+	background: white;
+	padding: 40px;
+	max-height: 300px;
+}
+
+.user-profile .profile {
+	flex: 1 100%;
+	padding-left: 10px;
+}
+
+.user-profile .profile-content {
+	display: flex;
+}
+
+
+.profile-content .stats {
+	flex : 2 100%;
+	margin-right: 10px;
+	background-color: white;
+	padding: 12px 20px 15px;
+}
+
+.profile-content .stats .portlet-title {
+	min-height: 32px;
+	font-size: 16px;
+	color : #578ebe;
+	text-transform: uppercase;
+}
+
+.profile-content .stats .ui.label>img {
+	width: 2.1666em !important;
+}
+
+.profile-content .feed {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-content .stats tr {
+	text-align: center;
+}
+
+.stats .result {
+	font-weight: 800;
+}
+
+.profile-content .feed .ui.circular.segment {
+	width: 120px;
+	height: 120px;
+	background-color: #e7505a;
+}
+
+
+.feed .ui.header {
+	color: white;
+}
+
+
+.feed .ui.header .sub.header {
+	color: white;
+	font-weight: 800;
+	font-size: 28px;
+}

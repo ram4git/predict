@@ -6,6 +6,7 @@ import Home from './Home'
 import Dashboard from './protected/Dashboard'
 import Match from './protected/Match'
 import Predict from './protected/Predict'
+import UserProfile from './protected/UserProfile'
 import { logout } from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
 
@@ -96,6 +97,7 @@ export default class App extends Component {
                 <PrivateRoute authed={this.state.authed} path='/ranks' component={Dashboard} />
                 <PrivateRoute authed={this.state.authed} path='/match' component={Match} />
                 <PrivateRoute authed={this.state.authed} path='/predict' component={Predict} />
+                <PrivateRoute authed={this.state.authed} path='/me' component={UserProfile} />
                 <Route render={() => <h3>No Match</h3>} />
               </Switch>
             </div>

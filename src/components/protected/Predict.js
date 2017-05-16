@@ -45,7 +45,7 @@ export default class Predict extends Component {
   renderMatches() {
     let items = [];
     [...Array(15).keys()].forEach(idx => {
-      items.push(<Card key={ idx } color={ `${idx === this.state.selected ? 'blue' : 'gray'}` } onClick={ this.onCardClick.bind(this, idx) }>
+      items.push(<Card key={ idx } color={ `${idx === this.state.selected ? 'blue' : 'grey'}` } onClick={ this.onCardClick.bind(this, idx) }>
         <div className={ `ui card ${ idx === this.state.selected ? 'raised' : '' }` }>
           <div className="matchNail">
             <p>#{ idx }</p>
