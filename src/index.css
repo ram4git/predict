@@ -10,7 +10,7 @@ body {
 .navbar .container {
   display: flex;
   justify-content: space-between;
-  background: #ecc6ec;
+  background: #2b3643;
   font-size: 20px;
 }
 
@@ -20,6 +20,10 @@ body {
   list-style: none;
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.navbar a {
+  color: white;
 }
 
 
