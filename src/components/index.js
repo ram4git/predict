@@ -5,6 +5,8 @@ import Register from './Register'
 import Home from './Home'
 import Dashboard from './protected/Dashboard'
 import Match from './protected/Match'
+import Secret from './protected/Secret'
+import EditMatch from './protected/EditMatch'
 import Predict from './protected/Predict'
 import UserProfile from './protected/UserProfile'
 import { logout } from '../helpers/auth'
@@ -98,7 +100,9 @@ export default class App extends Component {
                 <PrivateRoute authed={this.state.authed} path='/match' component={Match} />
                 <PrivateRoute authed={this.state.authed} path='/predict' component={Predict} />
                 <PrivateRoute authed={this.state.authed} path='/me' component={UserProfile} />
-                <Route render={() => <h3>No Match</h3>} />
+                <PrivateRoute authed={this.state.authed} path='/secrets' component={Secret} />
+                <PrivateRoute authed={this.state.authed} path='/secret/:matchId' component={EditMatch} />
+                <Route render={() => <h3>Yo Maan! Type a correct page name Maan!!</h3>} />
               </Switch>
             </div>
           </div>
