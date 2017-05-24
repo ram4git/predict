@@ -9,6 +9,7 @@ import Secret from './protected/Secret'
 import EditMatch from './protected/EditMatch'
 import Predict from './protected/Predict'
 import UserProfile from './protected/UserProfile'
+import Bet from './protected/bet'
 import { logout } from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
 
@@ -102,7 +103,9 @@ export default class App extends Component {
                 <PrivateRoute authed={this.state.authed} path='/me' component={UserProfile} />
                 <PrivateRoute authed={this.state.authed} path='/secrets' component={Secret} />
                 <PrivateRoute authed={this.state.authed} path='/secret/:matchId' component={EditMatch} />
+                <PrivateRoute authed={this.state.authed} path='/bet' component={Bet} />
                 <Route render={() => <h3>Yo Maan! Type a correct page name Maan!!</h3>} />
+
               </Switch>
             </div>
           </div>
