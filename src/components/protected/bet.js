@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as firebase from 'firebase';
 import BackgroundImage from 'react-background-image-loader';
 import Coverflow from 'react-coverflow';
 import { Button, Comment, Form, Header, Card, Image } from 'semantic-ui-react'
@@ -9,16 +10,22 @@ import './bet.css';
 
 export default class Bet extends Component {
 
-  constructor(props) {
-    super(props);
-    
+  componentDidMount() {
+    const matchesRef = firebase.database().ref().child('matches');
+
+    matchesRef.on('value', snap => {
+      console.log('ALL MATCHES' + JSON.stringify(snap.val(), null, 2));
+      this.setState({
+        matches: snap.val()
+      });
+    });
   }
 
   renderMatchCards() {
 
     var fn = function () {
       console.log('clicked');
-    }   
+    }
     return (
        <Coverflow
         width={960}
@@ -31,7 +38,7 @@ export default class Bet extends Component {
         <Image src="https://react.semantic-ui.com/assets/images/avatar/large/matthew.png"/>
         <Card.Content>
           <Card.Header>
-            
+
             Vijay
           </Card.Header>
           <Card.Meta>
@@ -53,7 +60,7 @@ export default class Bet extends Component {
 
   renderPlaceBets() {
     return(
-        <div> 
+        <div>
           <PlaceBets />
          </div>
     )
@@ -140,9 +147,9 @@ export default class Bet extends Component {
   render () {
     return (
       <div className="bet-page">
-        <div className="match-cards"> 
+        <div className="match-cards">
           {this.renderMatchCards()}
-        </div>  
+        </div>
         <div className="bet-content">
             <div className="place-bet">
               {this.renderPlaceBets()}
