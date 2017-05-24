@@ -1,0 +1,63 @@
+.match-cards {
+	padding-bottom: 30px;
+}
+
+.bet-content {
+	display: flex;
+}
+.place-bet {
+	flex : 2;
+	padding: 20px;
+	background-color: white;
+	margin-right: 20px;
+	max-height: 500px;
+	border-radius: 15px;
+}
+
+.place-bet .flags {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+
+.place-bet .ui.card {
+	margin : 0px;
+}
+
+.flags .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.comments .content {
+	margin-top: 0px;
+}
+
+.bet-content .comments {
+	padding: 20px;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.place-bet .bets {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+
+
+.bets .ui.segment {
+	margin-top: 0px;
+}
+
+.bets .ui.circular.segment {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.place-bet .submit {
+	display: flex;
+	justify-content: flex-end;
+}

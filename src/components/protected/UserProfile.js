@@ -50,7 +50,7 @@ export default class Dashboard extends Component {
     return true;
   }
 
-  renderAvatar() {
+renderAvatar() {
     //TODO : get Auth Object and check if same user or not
     const isUser = true;
 
